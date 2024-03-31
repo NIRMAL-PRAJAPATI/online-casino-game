@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coin25box | by sponzeall.com</title>
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- this is game over div -->
+    <div id="popuper">
+    </div>
+
+    <!-- main contant box -->
+    <main id="main">
+
+        <p id="errormsg"></p>
+
+        <audio id="boxopen"><source src="sound/box open.mp3" type="audio/ogg"></audio>
+        <audio id="coin"><source src="sound/coin.mp3" type="audio/ogg"></audio>
+        <audio id="gameover"><source src="sound/game over.mp3" type="audio/ogg"></audio>
+
+        <nav id="navigation">
+            <div>
+            <div class="flexer">
+                <label id="username"><img style="margin-bottom: -8px;" src="img/user.png" height="30"> nirmal prajapati</label>
+                <img id="close" src="img/close.png" height="30">
+            </div><br>
+
+            <div class="flexer" id="betamount">
+                <p>Bet Amount <img src="img/about.png" height="15" style="margin-bottom: -3px;"></p>
+                <div style="display: flex;">
+                    <p id="dollortxt">$</p>
+                <p id="totalamount">00.00</p>
+                </div>
+            </div>
+
+                <div id="inputbox">
+                    <img style="margin: 0px -58px 0px 13px;" src="img/dolar.png" height="30" alt="">
+                    <input id="amountinput" type="text" placeholder="000.00" required>
+                    <img class="amountimg" id="halfamount" src="img/half.png" height="25" alt=""> |
+                    <img class="amountimg" id="doubleamount" src="img/x2.png" height="25">
+                </div>
+
+                <label for="fruits">Mines</label><br>
+                <select name="fruits" id="fruits" required>
+                </select>
+
+                <button id="betbutton" class="betbtn" type="submit">Bet Round</button>
+                <a id="reloadbtn" href="#" onclick="location.reload()">Stop and restart !</a>
+            </div>
+
+            <div id="transectiondiv">
+                <h3>Transfer Money Using</h3>
+                <div id="contbox">
+                    <div id="cont1"><img src="img/bank.png" height="28">&nbsp;| Account Number</div>
+                    <div id="cont1"><img src="img/qrcode.png" height="28">&nbsp;| QR Code</div>
+                    <div id="cont1"><img src="img/upi.png" height="48">&nbsp;| UPI Apps</div>
+                </div>
+            </div>
+
+            <div id="bottom">
+                <div style="display: flex; align-items: center;">
+                <img id="bottomimg" src="img/setting.png" height="20">&nbsp; | &nbsp;
+                <img id="bottomimg" src="img/grow.png" height="20">
+                </div>
+                <div>
+                    <a class="bottomlink" href="#">feedback</a> &nbsp; | &nbsp; 
+                    <a class="bottomlink" href="#">T & C</a>
+                </div>
+            </div>
+        </nav>
+        <div id="body">
+            <img id="menu" src="img/menu.png" height="50" width="55">
+
+            <img id="styleimg" style="left: 15%; top: 20%;" src="img/profit.png" height="50" width="50">
+            <img id="styleimg" style="left: 10%; top: 74%;" src="img/game.png" height="50" width="50">
+            <img id="styleimg" style="left: 70%; top: 7%;" src="img/money.png" height="50" width="50">
+            <img id="styleimg" style="left: 80%; top: 80%;" src="img/percentage.png" height="50" width="50">
+            <img id="styleimg" style="left: 52%; top: 50%;" src="img/grow.png" height="50" width="50">
+            
+
+            <div id="divforscore">
+                <h4 class="scorebox">Beted Amount :<p id="betedamount" class="score">00.00</p></h4>
+                <h4 class="scorebox">Profit Amount :<p id="profitamount" class="score">00.00</p></h4>
+                <h4 class="scorebox">Opened Box :<p id="openedbox" class="score">0</p></h4>
+            </div>
+            <div class="grid-container">
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

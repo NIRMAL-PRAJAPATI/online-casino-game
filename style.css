@@ -1,0 +1,478 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    background-color: rgb(40, 47, 66);
+    height: 100vh;
+    width: 100vw;
+    /* padding: 8px; */
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#errormsg {
+    color: red;
+    width: 97%;
+    margin-top: 0px;
+    visibility: hidden;
+    z-index: 6;
+    display: flex;
+    padding: 10px;
+    position: absolute;
+    background-color: rgb(168, 168, 168);
+    justify-content: center;
+}
+
+.flexer {
+    display: flex;
+    justify-content: space-between;
+}
+
+#navigation {
+    height: 96%;
+    padding: 10px;
+    width: 97%;
+    background-color: rgb(56, 64, 90);
+    position: absolute;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+#username {
+    font-size: 20px;
+    color: rgb(245, 245, 245);
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    margin: -6px;
+    cursor: pointer;
+    padding: 8px;
+    width: 225px;
+    height: 25px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+#close {
+    background-color: rgb(48, 54, 75);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#close:hover, #username:hover {
+    background-color: rgb(51, 57, 80);
+}
+
+#betamount, label {
+    color: rgb(170, 170, 170);
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    margin-bottom: -9px;
+    margin-top: 15px;
+    font-size: 15px;
+    
+}
+
+#inputbox {
+    background-color: rgb(47, 52, 73);
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    margin-top: -5px;
+}
+
+#totalamount, #dollortxt {
+    color: rgb(0, 153, 0);
+    font-size: 20px;
+    margin-top: -10px;
+}
+
+#amountinput {
+    height: 35px;
+    width: 75%;
+    padding-left: 5px;
+    margin: 3px;
+    font-size: 18px;
+    color: white;
+    background-color: rgb(28, 34, 51);
+    border: none;
+}
+
+.amountimg {
+    padding: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.amountimg:hover, #menu:hover {
+    background-color: rgb(54, 61, 90);
+}
+
+select {
+    width: 100%;
+    height: 38px;
+    border: none;
+    margin-top: 5px;
+    background-color: rgb(28, 34, 51);
+    color: white;
+    font-size: 18px;
+    padding: 0px 5px;
+    cursor: pointer;
+}
+
+.betbtn {
+    background-color: rgb(0, 141, 0);
+    border: none;
+    cursor: pointer;
+    color: white;
+    height: 45px;
+    width: 100%;
+    font-size: 20px;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    margin-top: 15px;
+}
+
+#reloadbtn {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    text-decoration: none;
+    color: rgb(2, 2, 107);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    color: white;
+}
+
+#transectiondiv {
+    margin-top: -50px;
+}
+
+#contbox {
+    display: flex;
+}
+
+#cont1 {
+    color: rgb(209, 208, 208);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 20%;
+    margin: 0px 5px;
+    border-radius: 3px;
+    border: 2px solid gray;
+    cursor: pointer;
+}
+
+#cont1:hover {
+    background-color: rgba(32, 32, 32, 0.425);
+}
+
+#body {
+    width: 100vw;
+    background-color: rgb(35, 39, 54);
+    border-radius: 4px;
+    margin: 5px;
+    display: flex;
+    overflow: hidden;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+
+#menu:hover {
+    cursor: pointer;
+}
+
+#menu, #styleimg {
+    padding: 5px;
+    left: 10px;
+    top: 10px;
+    border-radius: 5px;
+    position: absolute;
+}
+
+#styleimg {
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.grid-container {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5px;
+    padding: 10px;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .grid-item {
+    display: inline-block;
+    /* visibility: hidden; */
+    background-color: rgb(18, 19, 27);
+    height: 40px;
+    width: 60%;
+    color: #fff;
+    border: none;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0 0 10px 1px black;
+    border: 1px solid rgba(73, 73, 73, 0.452);
+  }
+
+  .grid-item:hover {
+    transform: scale(1.015);
+  }
+
+  #griditem {
+    height: 120%;
+  }
+
+  .scorebox {
+    font-size: 23px;
+    margin-left: -30%;
+    color: rgb(175, 175, 175);
+    display: flex;
+    margin-top: -25px;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+  }
+
+  #profitamount, #betedamount {
+    width: 95px;
+    overflow: hidden;
+  }
+
+  .score {
+    border: 1px solid rgba(100, 100, 100, 0.76);
+    margin-top: 0px;
+    margin-left: 15px;
+    color: green;
+  }
+
+#bottom {
+    background-color: rgb(35, 39, 54);
+    height: 44.5px;
+    padding: 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    margin-bottom: -10px;
+    margin-left : -10px;
+    margin-right: -10px;
+}
+
+#bottomimg {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.bottomlink {
+    font-size: 14px;
+    color: rgb(185, 185, 185);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}
+
+#bottomimg:hover {
+    background-color: rgb(51, 57, 80);
+}
+
+#gameover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.288);
+}
+
+#gocontantdiv {
+    height: 80%;
+    width: 80%;
+    background-color: rgb(6, 9, 27);
+    border-radius: 5px;
+}
+
+#goimg {
+    height: 20%;
+    width: 50%;
+}
+
+#gomessage {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 1px;
+    color: rgb(241, 241, 241);
+    margin-top: 0px;
+    font-size: 17px;
+    width: 100%;
+    text-align: center;
+}
+
+table {
+    margin: 2% 25%;
+    width: 50%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: white;
+}
+
+table tr {
+    height: 40px;
+    background-color: rgb(24, 29, 56);
+}
+
+#gobtn1, #gobtn2 {
+    margin: 1% 25%;
+    height: 40px;
+    font-size: 19px;
+    width: 50%;
+}
+
+#gobtn2 {
+    margin-top: 0%;
+    background-color: transparent;
+    border: 2px solid green;
+}
+
+#skipbox {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(82, 82, 82, 0.295);
+}
+
+#skipmsg {
+    color: gray;
+    margin-right: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#skipsec {
+    margin: 10px;
+    padding: 3px;
+    color: red;
+    font-size: 23px;
+    margin-left: 10px;
+    border: 1px solid white;
+}
+
+#skipbtn {
+    width: 110px;
+    font-size: 15px;
+    height: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(143, 0, 36);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+@media(max-width: 900px) {
+    #body {
+        flex-direction: column;
+    }
+
+    .scorebox {
+        margin-left: -5%;
+        font-size: 17px;
+    }
+
+    #contbox {
+        flex-direction: column;
+    }
+
+    #cont1 {
+        width: 88%;
+        margin: 1%;
+    }
+
+    .grid-container {
+        width: 70%;
+      }
+
+      #goimg {
+        height: 12%;
+        width: 95%;
+    }
+}
+
+@media(max-width: 650px) {
+    .grid-container {
+        width: 95%;
+      }
+
+      .grid-item {
+        height: 30px;
+        width: 40%;
+      }
+
+      #griditem {
+        width: 100%;
+        height: 120%;
+      }
+
+      #gocontantdiv {
+        height: 97%;
+        width: 97%;
+      }
+
+      table {
+        margin: 8% 4%;
+        width: 93%;
+      }
+
+      #gobtn1, #gobtn2 {
+        margin: 1% 5%;
+        width: 90%;
+    }
+
+    #gobtn1 {
+        margin-top: 10%;
+      }
+
+    #goimg {
+        margin-bottom: 5%;
+    }
+}
+
+@media(max-width: 330px) {
+    .grid-container {
+        width: 95%;
+        grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+      }
+
+      #divforscore {
+        margin-top: 35%;
+      }
+
+      .grid-item {
+        height: 20px;
+        width: 30%;
+      }
+}
