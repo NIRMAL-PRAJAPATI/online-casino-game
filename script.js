@@ -22,18 +22,16 @@ $(document).ready(function () {
     let mines = 0;
     let returnpercent = 0;
     let clickcounter = 0;
-    let totalamountjs = Number.parseFloat(localStorage.getItem("totalamountforcoint25box"));
     let profitamountjs = 0;
     let openedboxcounter = 0;
+    let totalamountjs = 5000.23;
 
     if(localStorage.getItem("totalamountforcoint25box")) {
-        localStorage.setItem("totalamountforcoint25box", totalamountjs);
-        console.log("i am from if");
+        totalamountjs = Number.parseFloat(localStorage.getItem("totalamountforcoint25box"));
     }
+
     else {
-        localStorage.setItem("totalamountforcoint25box", "5000.23");
-        console.log("i am from else");
-        location.reload();
+        localStorage.setItem("totalamountforcoint25box", totalamountjs);
     }
 
     setInterval(() => {
@@ -244,7 +242,7 @@ $(document).ready(function () {
     }
 
     let returnpercentage = async () => {
-        let percent = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50];
+        let percent = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 25, 30, 35, 40, 50, 60, 65, 70, 75, 80, 85, 90, 95, 100];
 
         for (let i = 1; i <= percent.length; i++) {
             if (i == mines) {
