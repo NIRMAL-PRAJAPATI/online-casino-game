@@ -31,6 +31,7 @@ $(document).ready(function () {
     }
 
     else {
+        localStorage.removeItem("totalamountforcoint25box");
         localStorage.setItem("totalamountforcoint25box", totalamountjs);
     }
 
