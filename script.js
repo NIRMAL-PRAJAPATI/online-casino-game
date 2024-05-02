@@ -24,7 +24,7 @@ $(document).ready(function () {
     let clickcounter = 0;
     let profitamountjs = 0;
     let openedboxcounter = 0;
-    let totalamountjs = 5000.23;
+    let totalamountjs = 5200.23;
 
     if(localStorage.getItem("totalamountforcoint25box")) {
         totalamountjs = Number.parseFloat(localStorage.getItem("totalamountforcoint25box"));
@@ -186,7 +186,7 @@ $(document).ready(function () {
             if (amountinput.value && Number.parseInt(select.value) > 0) {
                 mines = Number.parseInt(select.value);
 
-                if (amountinput.value <= totalamountjs) {
+                if (amountinput.value >= 0.9999) {
                     let betedamountjs = amountinput.value;
 
                     totalamountjs -= amountinput.value;
