@@ -211,7 +211,7 @@ $(document).ready(function () {
             if (amountinput.value && Number.parseInt(select.value) > 0) {
                 mines = Number.parseInt(select.value);
 
-                if (amountinput.value >= 0.9999) {
+                if (amountinput.value < totalamountjs) {
                     let betedamountjs = amountinput.value;
 
                     totalamountjs -= amountinput.value;
