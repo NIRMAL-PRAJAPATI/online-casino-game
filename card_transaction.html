@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coin25box | by sponzeall.com</title>
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="card_transaction.css">
+</head>
+<body>
+    <form id="transbox">
+        <div id="loader"></div>
+        <img id="chclose" src="img/close.png" height="35">
+        <h1>CRADIT CARD INFO</h1>
+
+        TOTAL AMOUNT<br>
+        <input class="inputs" id="addedamount" type="number" placeholder="0000" required>
+
+    CARD HOLDER NAME<br>
+        <input class="inputs" id="chname" type="text">
+
+    CARD NUMBER<br>
+        <input class="inputs" id="chnumber" type="number" placeholder="XXX XXXX XXX" required>
+
+        <div style="display: flex;">
+            <div>
+        EXPIRY DATE<br>
+            <div style="display: flex;">
+                <input class="inputs" class="smallinput" id="chmonth" type="number" placeholder="MM" required>&nbsp;&nbsp;
+                <input class="inputs" class="smallinput" id="chmonth" type="number" placeholder="YY" required>
+            </div>
+            </div>
+            <div style="margin-left: 5%;">
+            CVC<br>
+                <input class="inputs" class="smallinput" id="chcvc" type="number" required>
+            </div>
+        </div><br>
+        <hr>
+        <div style="display: flex;">
+            <button class="buttons" id="cancel" type="reset">Clear</button>
+            <button class="buttons" id="submit" type="submit">PAY</button>
+        </div>
+    </form>
+
+    <script src="card_transaction.js"></script>
+</body>
+</html>
