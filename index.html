@@ -7,6 +7,7 @@
     <title>coin25box | by sponzeall.com</title>
     <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="card_transaction.css">
 </head>
 
 <body>
@@ -23,10 +24,16 @@
         <audio id="coin"><source src="sound/coin.mp3" type="audio/ogg"></audio>
         <audio id="gameover"><source src="sound/game over.mp3" type="audio/ogg"></audio>
 
+        <!-- transaction pages -->
+         <div id="transactionboxmain">
+         <div id="transactionbox"></div>
+         </div>
+
+        <!-- starting page, amount mine button etc -->
         <nav id="navigation">
             <div>
             <div class="flexer">
-                <label id="username"><img style="margin-bottom: -8px;" src="img/user.png" height="30"> nirmal prajapati</label>
+                <label id="username"><img style="margin-bottom: -8px;" src="img/user.png" height="30"> Adam Klassen</label>
                 <img id="close" src="img/close.png" height="30">
             </div><br>
 
@@ -54,25 +61,29 @@
             </div>
 
             <div id="transectiondiv">
-                <h3>Transfer Money Using</h3>
+                <h3>Transfer Money To Wallet Using</h3>
                 <div id="contbox">
-                    <div id="cont1"><img src="img/bank.png" height="28">&nbsp;| Account Number</div>
-                    <div id="cont1"><img src="img/qrcode.png" height="28">&nbsp;| QR Code</div>
-                    <div id="cont1"><img src="img/upi.png" height="48">&nbsp;| UPI Apps</div>
+                    <div class="cont1" id="cardbtn"><img src="img/card.png" height="31">&nbsp;| Cradit Card</div>
+                    <div class="cont1" id="upibtn"><img src="img/qrcode.png" height="28">&nbsp;| UPI / QR Code</div>
                 </div>
             </div>
+
+            <p id="instruction">Note: If there is not showing money in your wallet then click the 'Clear Acc.' below.</p>
 
             <div id="bottom">
                 <div style="display: flex; align-items: center;">
                 <img id="bottomimg" src="img/setting.png" height="20">&nbsp; | &nbsp;
-                <img id="bottomimg" src="img/grow.png" height="20">
+                <img id="bottomimg" src="img/grow.png" height="20">&nbsp; | &nbsp;
+                <img id="bottomimg" src="img/bank.png" height="20">
                 </div>
                 <div>
-                    <a class="bottomlink" href="#">feedback</a> &nbsp; | &nbsp; 
-                    <a class="bottomlink" href="#">T & C</a>
+                    <a class="bottomlink" href="#">feedback</a> &nbsp; | &nbsp;
+                    <a class="bottomlink" href="#">Clear Acc.</a>
                 </div>
             </div>
         </nav>
+
+        <!-- second page, 25 boxes of mines, diamonds etc -->
         <div id="body">
             <img id="menu" src="img/menu.png" height="50" width="55">
 
@@ -95,7 +106,7 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
