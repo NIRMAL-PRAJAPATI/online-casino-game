@@ -12,6 +12,18 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+#transactionboxmain {
+    background-color: rgba(0, 0, 0, 0.486);
+    position: absolute;
+    z-index: 10;
+}
+
+#transactionbox {
+    display: flex;
+    justify-content: center;
+    margin: 3%;
+}
+
 #errormsg {
     color: red;
     width: 97%;
@@ -95,6 +107,10 @@ body {
     margin-top: -10px;
 }
 
+#instruction {
+    color: rgba(180, 180, 180, 0.5);
+}
+
 #amountinput {
     height: 35px;
     width: 75%;
@@ -102,7 +118,7 @@ body {
     margin: 3px;
     font-size: 18px;
     color: white;
-    background-color: rgb(28, 34, 51);
+    background-color: rgb(35, 43, 63);
     border: none;
 }
 
@@ -121,7 +137,7 @@ select {
     height: 38px;
     border: none;
     margin-top: 5px;
-    background-color: rgb(28, 34, 51);
+    background-color: rgb(35, 43, 63);
     color: white;
     font-size: 18px;
     padding: 0px 5px;
@@ -146,7 +162,7 @@ select {
     height: 40px;
     font-size: 18px;
     text-decoration: none;
-    color: rgb(2, 2, 107);
+    color: rgb(121, 6, 6);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -164,7 +180,7 @@ h3 {
     display: flex;
 }
 
-#cont1 {
+.cont1 {
     color: rgb(209, 208, 208);
     font-size: 18px;
     font-weight: 600;
@@ -180,13 +196,13 @@ h3 {
     cursor: pointer;
 }
 
-#cont1:hover {
+.cont1:hover {
     background-color: rgba(32, 32, 32, 0.425);
 }
 
 #body {
     width: 100vw;
-    background-color: rgb(35, 39, 54);
+    background-color: rgb(42, 47, 65);
     border-radius: 4px;
     margin: 5px;
     display: flex;
@@ -227,7 +243,7 @@ h3 {
   .grid-item {
     display: inline-block;
     /* visibility: hidden; */
-    background-color: rgb(18, 19, 27);
+    background-color: rgb(25, 27, 36);
     height: 40px;
     width: 60%;
     color: #fff;
@@ -236,7 +252,7 @@ h3 {
     text-align: center;
     cursor: pointer;
     border-radius: 3px;
-    box-shadow: 0 0 10px 1px black;
+    box-shadow: 0 0 10px 1px rgba(10, 10, 10, 0.699);
     border: 1px solid rgba(73, 73, 73, 0.452);
   }
 
@@ -271,7 +287,7 @@ h3 {
   }
 
 #bottom {
-    background-color: rgb(35, 39, 54);
+    background-color: rgb(42, 47, 65);
     height: 44.5px;
     padding: 0px 5px;
     display: flex;
@@ -313,7 +329,7 @@ h3 {
 #gocontantdiv {
     height: 80%;
     width: 80%;
-    background-color: rgb(6, 9, 27);
+    background-color: rgb(15, 18, 37);
     border-radius: 5px;
 }
 
@@ -355,7 +371,7 @@ table tr {
 #gobtn2 {
     margin-top: 0%;
     background-color: transparent;
-    border: 2px solid green;
+    border: 2px solid rgb(12, 129, 12);
 }
 
 #skipbox {
@@ -386,7 +402,7 @@ table tr {
     font-size: 15px;
     height: 40px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(143, 0, 36);
+    background-color: rgb(145, 11, 45);
     border: none;
     color: white;
     cursor: pointer;
@@ -406,7 +422,7 @@ table tr {
         flex-direction: column;
     }
 
-    #cont1 {
+    .cont1 {
         width: 88%;
         margin: 1%;
     }
