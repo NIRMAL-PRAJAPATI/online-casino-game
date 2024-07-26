@@ -219,7 +219,6 @@ $(document).ready(function () {
                     gridcontainer.style.pointerEvents = 'auto';
                     amountinput.style.pointerEvents = 'none';
                     select.style.pointerEvents = 'none';
-                    cont1.style.pointerEvents = 'none';
                     halfamount.style.pointerEvents = 'none';
                     doubleamount.style.pointerEvents = 'none';
                     amountinput.style.opacity = "0.9";
@@ -237,6 +236,8 @@ $(document).ready(function () {
                     setInterval(() => {
                         openedbox.innerHTML = openedboxcounter;
                     }, 100);
+
+                    cont1.style.pointerEvents = 'none';
                 }
                 else {
                     errormsg.style.visibility = 'inherit';
