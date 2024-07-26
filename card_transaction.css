@@ -73,5 +73,11 @@ h1 {
     #transbox {
         padding: 3%;
         font-size: 12px;
+        width: 95%;
+    }
+
+    #loader {
+        width: 96%;
+        left: 2%;
     }
 }
