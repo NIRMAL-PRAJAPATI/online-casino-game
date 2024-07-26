@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    let transactionboxmain = document.querySelector('#transactionboxmain');
     var boxopen = document.getElementById("boxopen");
     var coin = document.getElementById("coin");
     var gameover = document.getElementById("gameover");
@@ -18,21 +19,45 @@ $(document).ready(function () {
     let totalamount = document.querySelector('#totalamount');
     let profitamount = document.querySelector('#profitamount');
     let errormsg = document.querySelector('#errormsg');
+    let addedamount = document.querySelector('#addedamount');
     let percenter = 0;
     let mines = 0;
     let returnpercent = 0;
     let clickcounter = 0;
     let profitamountjs = 0;
     let openedboxcounter = 0;
-    let totalamountjs = 5200.23;
+    let totalamountjs = 5000.33;
+
+    $('#cardbtn').click(() => {
+        $('#transactionbox').load("card_transaction.html", () => {
+        })
+
+        transactionboxmain.style.left = "0";
+        transactionboxmain.style.height = "100vh";
+        transactionboxmain.style.width = "100vw";
+    })
+
+    $('#upibtn').click(() => {
+        $('#transactionbox').load("upi_transaction.html", () => {
+        })
+
+        transactionboxmain.style.left = "0";
+        transactionboxmain.style.height = "100vh";
+        transactionboxmain.style.width = "100vw";
+    })
 
     if(localStorage.getItem("totalamountforcoint25box")) {
-        totalamountjs = Number.parseFloat(localStorage.getItem("totalamountforcoint25box"));
+        let a = Number.parseFloat(localStorage.getItem("totalamountforcoint25box"));
+        a = a + Number.parseFloat(localStorage.getItem("addedmoney"));
+        totalamountjs = a;
+
+        localStorage.setItem("addedmoney", 0);
     }
 
     else {
-        localStorage.removeItem("totalamountforcoint25box");
+        // localStorage.removeItem("totalamountforcoint25box");
         localStorage.setItem("totalamountforcoint25box", totalamountjs);
+        localStorage.setItem("addedmoney", 0);
     }
 
     setInterval(() => {
@@ -45,7 +70,7 @@ $(document).ready(function () {
 
     gridcontainer.style.pointerEvents = 'none';
 
-    for (let i = 0; i <= 25; i++) {
+    for (let i = 0; i <= 24; i++) {
         select.innerHTML += `<option value="${i}">${i}</option>`;
     }
 
@@ -243,9 +268,9 @@ $(document).ready(function () {
     }
 
     let returnpercentage = async () => {
-        let percent = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 25, 30, 35, 40, 50, 60, 65, 70, 75, 80, 85, 90, 95, 100];
+        let percent = [4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 25, 30, 35, 40, 50, 60, 65, 70, 75, 80, 85, 90, 95, 100];
 
-        for (let i = 1; i <= percent.length; i++) {
+        for (let i = 0; i <= percent.length; i++) {
             if (i == mines) {
 
                 percenter = percent[i];
@@ -255,4 +280,10 @@ $(document).ready(function () {
     }
 
     amountinputfunc();
+
+    $(".bottomlink").click(() => {
+        localStorage.removeItem("totalamountforcoint25box");
+        localStorage.removeItem("addedmoney");
+        location.reload();
+    })
 });
